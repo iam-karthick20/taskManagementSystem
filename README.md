@@ -16,7 +16,7 @@ A modular and scalable **Task Management System** built using **Clean Architectu
 
 ### TMS.API
 
-Microsoft.AspNetCore.OpenApi
+- Microsoft.AspNetCore.OpenApi
 Microsoft.EntityFrameworkCore
 Microsoft.EntityFrameworkCore.Tools
 Scalar.AspNetCore
@@ -183,6 +183,7 @@ dotnet build
 dotnet run --project TMS.API
 
 ---
+
 
 
 
