@@ -17,27 +17,27 @@ A modular and scalable **Task Management System** built using **Clean Architectu
 ### TMS.API
 
 - Microsoft.AspNetCore.OpenApi
-Microsoft.EntityFrameworkCore
-Microsoft.EntityFrameworkCore.Tools
-Scalar.AspNetCore
-Serilog.AspNetCore
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.Tools
+- Scalar.AspNetCore
+- Serilog.AspNetCore
 
 ### TMS.Infrastructure
 
-Microsoft.EntityFrameworkCore
-Microsoft.EntityFrameworkCore.SqlServer
-Microsoft.EntityFrameworkCore.Tools
-System.IdentityModel.Tokens.Jwt
-Microsoft.AspNetCore.Authentication.JwtBearer
-Microsoft.AspNetCore.Identity
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.EntityFrameworkCore.Tools
+- System.IdentityModel.Tokens.Jwt
+- Microsoft.AspNetCore.Authentication.JwtBearer
+- Microsoft.AspNetCore.Identity
 
 ---
 
 ## Project References
 
-`TMS.API` → references `TMS.Infrastructure`
-`TMS.Infrastructure` → references `TMS.Application`, `TMS.Domain`
-`TMS.Domain` → references `TMS.Application`
+- `TMS.API` → references `TMS.Infrastructure`
+- `TMS.Infrastructure` → references `TMS.Application`, `TMS.Domain`
+- `TMS.Domain` → references `TMS.Application`
 
 ---
 
@@ -45,9 +45,9 @@ Microsoft.AspNetCore.Identity
 
 ### Prerequisites
 
-.NET 8 SDK
-SQL Server
-Visual Studio or VS Code
+- .NET 8 SDK
+- SQL Server
+- VS Code
 
 ### Steps
 
@@ -90,8 +90,8 @@ JWT Bearer token authentication is used.
 
 ## Credentials for Test Users
 
-Username - admin
-Password - password 
+- Username - admin
+- Password - password 
 
 ### (Role can get the from claims in the JWT token)
 
@@ -104,21 +104,21 @@ Use these credentials to generate a token using the `/api/auth/login` endpoint.
 ### AuthController
 
 
-`/api/auth/login` - POST - Login and receive JWT         
-`/api/auth/refresh-token` - POST - Refresh JWT token  
-`/api/auth/logout` - POST - Logout and revoke refresh token
+- `/api/auth/login` - POST - Login and receive JWT         
+- `/api/auth/refresh-token` - POST - Refresh JWT token  
+- `/api/auth/logout` - POST - Logout and revoke refresh token
 
 ### UserController
 
-`/api/user` - POST - Create new user
-`/api/user` - GET - Admin Authentication Required - Get all users 
-`/api/user/{userId}` - GET - User Authentication Required - Get specific user details
+- `/api/user` - POST - Create new user
+- `/api/user` - GET - Admin Authentication Required - Get all users 
+- `/api/user/{userId}` - GET - User Authentication Required - Get specific user details
 
 ### TaskController
 
-`/api/task`  - POST - User Authentication Required - Create a new task
-`/api/task`  - PATCH - User / Admin Authentication Required - Update an existing task - (Admin can complete and User can Update)
-`/api/task`  - GET - User / Admin Authentication Required - Retrieve user tasks (Admin can get all task and User can get their own task)
+- `/api/task`  - POST - User Authentication Required - Create a new task
+- `/api/task`  - PATCH - User / Admin Authentication Required - Update an existing task - (Admin can complete and User can Update)
+- `/api/task`  - GET - User / Admin Authentication Required - Retrieve user tasks (Admin can get all task and User can get their own task)
 
 ---
 
@@ -183,6 +183,7 @@ dotnet build
 dotnet run --project TMS.API
 
 ---
+
 
 
 
